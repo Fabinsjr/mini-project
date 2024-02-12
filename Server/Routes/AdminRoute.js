@@ -54,11 +54,11 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage: storage
 })
-// end imag eupload 
+// end image upload
 
 router.post('/add_employee',upload.single('image'),(req, res) => {
     const sql = `INSERT INTO employee 
-        (name,email,password, salary, address,image, category_id) 
+        (name,email,password,address,image, category_id) 
         VALUES (?)`;
     bcrypt.hash(req.body.password, 10, (err, hash) => {
         if(err) return res.json({Status: false, Error: "Query Error"})
@@ -66,7 +66,7 @@ router.post('/add_employee',upload.single('image'),(req, res) => {
             req.body.name,
             req.body.email,
             hash,
-            req.body.salary,
+            // req.body.salary,
             req.body.address, 
             req.file.filename,
             req.body.category_id
@@ -98,12 +98,12 @@ router.get('/employee/:id', (req, res) => {
 router.put('/edit_employee/:id', (req, res) => {
     const id = req.params.id;
     const sql = `UPDATE employee 
-        set name = ?, email = ?, salary = ?, address = ?, category_id = ? 
+        set name = ?, email = ?, address = ?, category_id = ? 
         Where id = ?`
     const values = [
         req.body.name,
         req.body.email,
-        req.body.salary,
+        // req.body.salary,
         req.body.address,
         req.body.category_id
     ]
@@ -138,13 +138,13 @@ router.get('/employee_count', (req, res) => {
     })
 })
 
-router.get('/salary_count', (req, res) => {
-    const sql = "select sum(salary) as salaryOFEmp from employee";
-    con.query(sql, (err, result) => {
-        if(err) return res.json({Status: false, Error: "Query Error"+err})
-        return res.json({Status: true, Result: result})
-    })
-})
+// router.get('/salary_count', (req, res) => {
+//     const sql = "select sum(salary) as salaryOFEmp from employee";
+//     con.query(sql, (err, result) => {
+//         if(err) return res.json({Status: false, Error: "Query Error"+err})
+//         return res.json({Status: true, Result: result})
+//     })
+// })
 
 router.get('/admin_records', (req, res) => {
     const sql = "select * from admin"

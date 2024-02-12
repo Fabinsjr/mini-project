@@ -7,7 +7,7 @@ const EditEmployee = () => {
     const [employee, setEmployee] = useState({
         name: "",
         email: "",
-        salary: "",
+        // salary: "",
         address: "",
         category_id: "",
       });
@@ -31,7 +31,7 @@ const EditEmployee = () => {
                 name: result.data.Result[0].name,
                 email: result.data.Result[0].email,
                 address: result.data.Result[0].address,
-                salary: result.data.Result[0].salary,
+                // salary: result.data.Result[0].salary,
                 category_id: result.data.Result[0].category_id,
             })
         }).catch(err => console.log(err))
@@ -84,7 +84,7 @@ const EditEmployee = () => {
                 setEmployee({ ...employee, email: e.target.value })
               }
             />
-          </div>
+          {/* </div>
           <div className='col-12'>
             <label for="inputSalary" className="form-label">
               Salary
@@ -99,7 +99,7 @@ const EditEmployee = () => {
               onChange={(e) =>
                 setEmployee({ ...employee, salary: e.target.value })
               }
-            />
+            /> */}
           </div>
           <div className="col-12">
             <label for="inputAddress" className="form-label">
