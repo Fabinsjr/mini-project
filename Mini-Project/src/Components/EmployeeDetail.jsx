@@ -71,11 +71,9 @@ const EmployeeDetail = () => {
                                 </div>
                             </div>
                         </div>
-            </div>
-            </div>
             
-            <div class="w-50 h-50">
-            <div class="column">
+            
+
                         <div class="col-lg-6 mb-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
