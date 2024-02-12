@@ -74,7 +74,7 @@ const Dashboard = () => {
         </div>
         <div className="col p-0 m-0">
             <div className="p-2 d-flex justify-content-center" style={{backgroundColor: "#5457B0"}}>
-                <h4 style={{fontFamily:"Helvetica",color:"white"}}>Student Management System</h4>
+                <h4 style={{fontFamily:"Helvetica",color:"white"}}>D.O.S.T</h4>
             </div>
             <Outlet />
         </div>

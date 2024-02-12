@@ -31,7 +31,7 @@ const EmployeeDetail = () => {
     
     <div>
         <div className="p-2 d-flex justify-content-center shadow" style={{backgroundColor: "#5457B0"}}>
-            <h4 style={{color: "white"}}>Student Management System</h4>
+            <h4 style={{color: "white"}}>D.O.S.T</h4>
         </div>
         <div className='d-flex justify-content-center flex-column align-items-center mt-3'>
             <img src={`http://localhost:3000/Images/`+employee.image} className='emp_det_image' style={{backgroundColor: "grey"}}/>
