@@ -1,0 +1,21 @@
+[
+    {
+        "label": "Python",
+        "value":"65"
+    },
+    {
+        "label":"DAA",
+        "value":"35"
+    },
+
+    {
+        "label": "MIS",
+        "value":"65"
+    },
+    {
+        "label":"Compiler Design",
+        "value":"35"
+    }
+
+
+]
