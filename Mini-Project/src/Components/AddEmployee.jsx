@@ -34,7 +34,6 @@ const AddEmployee = () => {
     formData.append('name', employee.name);
     formData.append('email', employee.email);
     formData.append('password', employee.password);
-    // formData.append('salary', employee.salary);
     formData.append('address', employee.address);
     formData.append('image', employee.image);
     formData.append('category_id', employee.category_id);
@@ -97,19 +96,6 @@ const AddEmployee = () => {
                 setEmployee({ ...employee, password: e.target.value })
               }
             />
-            {/* <label for="inputSalary" className="form-label">
-              Salary
-            </label>
-            <input
-              type="text"
-              className="form-control rounded-0"
-              id="inputSalary"
-              placeholder="Enter Salary"
-              autoComplete="off"
-              onChange={(e) =>
-                setEmployee({ ...employee, salary: e.target.value })
-              }
-            /> */}
           </div>
           <div className="col-12">
             <label for="inputAddress" className="form-label">
